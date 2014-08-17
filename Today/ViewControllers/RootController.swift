@@ -17,9 +17,6 @@ class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
         mainTableView = UITableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
         self.view.addSubview(mainTableView)
-        dataStore.sqliteManager.createSqliteFile();
-        dataStore.sqliteManager.createSqliteFile();
-        println( DataStore.sharedInstance.debugDescription)
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
