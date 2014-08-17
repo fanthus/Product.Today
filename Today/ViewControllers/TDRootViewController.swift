@@ -8,15 +8,15 @@
 
 import UIKit
 
-class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class RootViewController:TDBaseViewController,UITableViewDelegate,UITableViewDataSource{
 
     var mainTableView:UITableView?;
     var dataStore:DataStore = DataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let rightItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action:"fff")
+        self.title = NSLocalizedString("Hello", comment:"")
+        let rightItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action:"enterAddVC")
         self.navigationItem.rightBarButtonItem = rightItem
         mainTableView = UITableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
         self.view.addSubview(mainTableView)
@@ -37,8 +37,10 @@ class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
     }
     
-    func fff(){
-        println("fffff")
+    func enterAddVC(){
+        let addItemVC:TDAddItemViewController = TDAddItemViewController()
+        let addItemNav:UINavigationController = UINavigationController(rootViewController: addItemVC)
+        self.presentViewController(addItemNav, animated: true, completion:nil)
     }
 
 

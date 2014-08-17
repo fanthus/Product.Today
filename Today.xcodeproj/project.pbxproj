@@ -20,7 +20,7 @@
 		F51A24B91993BB3200F0F591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51A24B71993BB3200F0F591 /* Main.storyboard */; };
 		F51A24BB1993BB3200F0F591 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51A24BA1993BB3200F0F591 /* Images.xcassets */; };
 		F51A24C71993BB3200F0F591 /* TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24C61993BB3200F0F591 /* TodayTests.swift */; };
-		F51A24D21993BC6900F0F591 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D11993BC6900F0F591 /* RootController.swift */; };
+		F51A24D21993BC6900F0F591 /* TDRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D11993BC6900F0F591 /* TDRootViewController.swift */; };
 		F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D81993D2D000F0F591 /* DataStore.swift */; };
 		F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24DE1993D74B00F0F591 /* AFHTTPRequestOperation.m */; };
 		F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E01993D74B00F0F591 /* AFHTTPRequestOperationManager.m */; };
@@ -31,6 +31,11 @@
 		F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EB1993D74B00F0F591 /* AFURLRequestSerialization.m */; };
 		F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */; };
 		F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */; };
+		F549190A19A08BD6003EF072 /* TDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549190919A08BD6003EF072 /* TDBaseViewController.swift */; };
+		F549190C19A08C64003EF072 /* TDAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549190B19A08C64003EF072 /* TDAddItemViewController.swift */; };
+		F549192B19A0A194003EF072 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549192D19A0A194003EF072 /* InfoPlist.strings */; };
+		F549193519A0A847003EF072 /* AFNetworking.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193719A0A847003EF072 /* AFNetworking.strings */; };
+		F549193A19A0A847003EF072 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193C19A0A847003EF072 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +65,13 @@
 		F5087C89199E4B4E008767F7 /* SessionSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSetting.swift; sourceTree = "<group>"; };
 		F5087C8D199F94B5008767F7 /* SqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		F51A24AE1993BB3100F0F591 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A24B21993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A24B31993BB3200F0F591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F51A24B81993BB3200F0F591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F51A24BA1993BB3200F0F591 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F51A24C01993BB3200F0F591 /* TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A24C51993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F51A24C51993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = TodayTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		F51A24C61993BB3200F0F591 /* TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTests.swift; sourceTree = "<group>"; };
-		F51A24D11993BC6900F0F591 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		F51A24D11993BC6900F0F591 /* TDRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDRootViewController.swift; sourceTree = "<group>"; };
 		F51A24D81993D2D000F0F591 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Today-Bridging-Header.h"; sourceTree = "<group>"; };
 		F51A24DD1993D74B00F0F591 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -89,6 +93,13 @@
 		F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F51A24EE1993D74B00F0F591 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F549190919A08BD6003EF072 /* TDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDBaseViewController.swift; sourceTree = "<group>"; };
+		F549190B19A08C64003EF072 /* TDAddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDAddItemViewController.swift; sourceTree = "<group>"; };
+		F549192219A0A06B003EF072 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F549192319A0A08D003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F549192C19A0A194003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F549193619A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AFNetworking.strings"; sourceTree = "<group>"; };
+		F549193B19A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +142,8 @@
 		F51A24A51993BB3100F0F591 = {
 			isa = PBXGroup;
 			children = (
+				F549193C19A0A847003EF072 /* Localizable.strings */,
+				F549193719A0A847003EF072 /* AFNetworking.strings */,
 				F5087C85199E4287008767F7 /* libsqlite3.0.dylib */,
 				F51A24B01993BB3100F0F591 /* Today */,
 				F51A24C31993BB3200F0F591 /* TodayTests */,
@@ -167,7 +180,6 @@
 		F51A24B11993BB3100F0F591 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F51A24B21993BB3200F0F591 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,6 +196,7 @@
 		F51A24C41993BB3200F0F591 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F549192D19A0A194003EF072 /* InfoPlist.strings */,
 				F51A24C51993BB3200F0F591 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,7 +205,9 @@
 		F51A24D01993BC6900F0F591 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F51A24D11993BC6900F0F591 /* RootController.swift */,
+				F549190919A08BD6003EF072 /* TDBaseViewController.swift */,
+				F51A24D11993BC6900F0F591 /* TDRootViewController.swift */,
+				F549190B19A08C64003EF072 /* TDAddItemViewController.swift */,
 				F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */,
 			);
 			path = ViewControllers;
@@ -318,7 +333,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = F51A24A51993BB3100F0F591;
@@ -337,6 +351,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F549193519A0A847003EF072 /* AFNetworking.strings in Resources */,
+				F549193A19A0A847003EF072 /* Localizable.strings in Resources */,
 				F51A24B91993BB3200F0F591 /* Main.storyboard in Resources */,
 				F51A24BB1993BB3200F0F591 /* Images.xcassets in Resources */,
 			);
@@ -346,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F549192B19A0A194003EF072 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */,
-				F51A24D21993BC6900F0F591 /* RootController.swift in Sources */,
+				F51A24D21993BC6900F0F591 /* TDRootViewController.swift in Sources */,
 				F5087C80199E423F008767F7 /* FMDatabase.m in Sources */,
 				F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */,
 				F51A24F31993D74B00F0F591 /* AFNetworkReachabilityManager.m in Sources */,
@@ -371,6 +388,8 @@
 				F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */,
 				F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */,
 				F5087C82199E423F008767F7 /* FMDatabasePool.m in Sources */,
+				F549190C19A08C64003EF072 /* TDAddItemViewController.swift in Sources */,
+				F549190A19A08BD6003EF072 /* TDBaseViewController.swift in Sources */,
 				F5087C8E199F94B5008767F7 /* SqliteManager.swift in Sources */,
 				F5087C83199E423F008767F7 /* FMDatabaseQueue.m in Sources */,
 				F51A24B41993BB3200F0F591 /* AppDelegate.swift in Sources */,
@@ -402,8 +421,34 @@
 			isa = PBXVariantGroup;
 			children = (
 				F51A24B81993BB3200F0F591 /* Base */,
+				F549192219A0A06B003EF072 /* en */,
+				F549192319A0A08D003EF072 /* zh-Hans */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F549192D19A0A194003EF072 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F549192C19A0A194003EF072 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F549193719A0A847003EF072 /* AFNetworking.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F549193619A0A847003EF072 /* zh-Hans */,
+			);
+			name = AFNetworking.strings;
+			sourceTree = "<group>";
+		};
+		F549193C19A0A847003EF072 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F549193B19A0A847003EF072 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
