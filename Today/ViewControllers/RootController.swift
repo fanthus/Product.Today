@@ -15,8 +15,11 @@ class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let rightItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action:"fff")
+        self.navigationItem.rightBarButtonItem = rightItem
         mainTableView = UITableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
-        self.view.addSubview(mainTableView)				
+        self.view.addSubview(mainTableView)
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -32,6 +35,10 @@ class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func fff(){
+        println("fffff")
     }
 
 
