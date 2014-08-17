@@ -7,11 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5087C80199E423F008767F7 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5087C76199E423F008767F7 /* FMDatabase.m */; };
+		F5087C81199E423F008767F7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F5087C78199E423F008767F7 /* FMDatabaseAdditions.m */; };
+		F5087C82199E423F008767F7 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F5087C7A199E423F008767F7 /* FMDatabasePool.m */; };
+		F5087C83199E423F008767F7 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F5087C7C199E423F008767F7 /* FMDatabaseQueue.m */; };
+		F5087C84199E423F008767F7 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F5087C7F199E423F008767F7 /* FMResultSet.m */; };
+		F5087C86199E4287008767F7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5087C85199E4287008767F7 /* libsqlite3.0.dylib */; };
+		F5087C88199E4B41008767F7 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5087C87199E4B41008767F7 /* UserSetting.swift */; };
+		F5087C8A199E4B4E008767F7 /* SessionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5087C89199E4B4E008767F7 /* SessionSetting.swift */; };
+		F5087C8E199F94B5008767F7 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5087C8D199F94B5008767F7 /* SqliteManager.swift */; };
 		F51A24B41993BB3200F0F591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24B31993BB3200F0F591 /* AppDelegate.swift */; };
 		F51A24B91993BB3200F0F591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51A24B71993BB3200F0F591 /* Main.storyboard */; };
 		F51A24BB1993BB3200F0F591 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51A24BA1993BB3200F0F591 /* Images.xcassets */; };
 		F51A24C71993BB3200F0F591 /* TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24C61993BB3200F0F591 /* TodayTests.swift */; };
 		F51A24D21993BC6900F0F591 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D11993BC6900F0F591 /* RootController.swift */; };
+		F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D81993D2D000F0F591 /* DataStore.swift */; };
+		F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24DE1993D74B00F0F591 /* AFHTTPRequestOperation.m */; };
+		F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E01993D74B00F0F591 /* AFHTTPRequestOperationManager.m */; };
+		F51A24F21993D74B00F0F591 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E21993D74B00F0F591 /* AFHTTPSessionManager.m */; };
+		F51A24F31993D74B00F0F591 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E51993D74B00F0F591 /* AFNetworkReachabilityManager.m */; };
+		F51A24F41993D74B00F0F591 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E71993D74B00F0F591 /* AFSecurityPolicy.m */; };
+		F51A24F51993D74B00F0F591 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E91993D74B00F0F591 /* AFURLConnectionOperation.m */; };
+		F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EB1993D74B00F0F591 /* AFURLRequestSerialization.m */; };
+		F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */; };
+		F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +44,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F5087C75199E423F008767F7 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		F5087C76199E423F008767F7 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		F5087C77199E423F008767F7 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		F5087C78199E423F008767F7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		F5087C79199E423F008767F7 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		F5087C7A199E423F008767F7 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		F5087C7B199E423F008767F7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F5087C7C199E423F008767F7 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		F5087C7D199E423F008767F7 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		F5087C7E199E423F008767F7 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		F5087C7F199E423F008767F7 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		F5087C85199E4287008767F7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		F5087C87199E4B41008767F7 /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
+		F5087C89199E4B4E008767F7 /* SessionSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSetting.swift; sourceTree = "<group>"; };
+		F5087C8D199F94B5008767F7 /* SqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		F51A24AE1993BB3100F0F591 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A24B21993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A24B31993BB3200F0F591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +68,27 @@
 		F51A24C51993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A24C61993BB3200F0F591 /* TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTests.swift; sourceTree = "<group>"; };
 		F51A24D11993BC6900F0F591 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
+		F51A24D81993D2D000F0F591 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Today-Bridging-Header.h"; sourceTree = "<group>"; };
+		F51A24DD1993D74B00F0F591 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		F51A24DE1993D74B00F0F591 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		F51A24DF1993D74B00F0F591 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		F51A24E01993D74B00F0F591 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		F51A24E11993D74B00F0F591 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		F51A24E21993D74B00F0F591 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		F51A24E31993D74B00F0F591 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		F51A24E41993D74B00F0F591 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F51A24E51993D74B00F0F591 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		F51A24E61993D74B00F0F591 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		F51A24E71993D74B00F0F591 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		F51A24E81993D74B00F0F591 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		F51A24E91993D74B00F0F591 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		F51A24EA1993D74B00F0F591 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		F51A24EB1993D74B00F0F591 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		F51A24EC1993D74B00F0F591 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		F51A24EE1993D74B00F0F591 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5087C86199E4287008767F7 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +110,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5087C74199E423F008767F7 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				F5087C75199E423F008767F7 /* FMDatabase.h */,
+				F5087C76199E423F008767F7 /* FMDatabase.m */,
+				F5087C77199E423F008767F7 /* FMDatabaseAdditions.h */,
+				F5087C78199E423F008767F7 /* FMDatabaseAdditions.m */,
+				F5087C79199E423F008767F7 /* FMDatabasePool.h */,
+				F5087C7A199E423F008767F7 /* FMDatabasePool.m */,
+				F5087C7B199E423F008767F7 /* FMDatabaseQueue.h */,
+				F5087C7C199E423F008767F7 /* FMDatabaseQueue.m */,
+				F5087C7D199E423F008767F7 /* FMDB.h */,
+				F5087C7E199E423F008767F7 /* FMResultSet.h */,
+				F5087C7F199E423F008767F7 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		F51A24A51993BB3100F0F591 = {
 			isa = PBXGroup;
 			children = (
+				F5087C85199E4287008767F7 /* libsqlite3.0.dylib */,
 				F51A24B01993BB3100F0F591 /* Today */,
 				F51A24C31993BB3200F0F591 /* TodayTests */,
 				F51A24AF1993BB3100F0F591 /* Products */,
@@ -118,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				F51A24D11993BC6900F0F591 /* RootController.swift */,
+				F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -132,6 +208,25 @@
 		F51A24D41993BCFD00F0F591 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F51A24DD1993D74B00F0F591 /* AFHTTPRequestOperation.h */,
+				F51A24DE1993D74B00F0F591 /* AFHTTPRequestOperation.m */,
+				F51A24DF1993D74B00F0F591 /* AFHTTPRequestOperationManager.h */,
+				F51A24E01993D74B00F0F591 /* AFHTTPRequestOperationManager.m */,
+				F51A24E11993D74B00F0F591 /* AFHTTPSessionManager.h */,
+				F51A24E21993D74B00F0F591 /* AFHTTPSessionManager.m */,
+				F51A24E31993D74B00F0F591 /* AFNetworking.h */,
+				F51A24E41993D74B00F0F591 /* AFNetworkReachabilityManager.h */,
+				F51A24E51993D74B00F0F591 /* AFNetworkReachabilityManager.m */,
+				F51A24E61993D74B00F0F591 /* AFSecurityPolicy.h */,
+				F51A24E71993D74B00F0F591 /* AFSecurityPolicy.m */,
+				F51A24E81993D74B00F0F591 /* AFURLConnectionOperation.h */,
+				F51A24E91993D74B00F0F591 /* AFURLConnectionOperation.m */,
+				F51A24EA1993D74B00F0F591 /* AFURLRequestSerialization.h */,
+				F51A24EB1993D74B00F0F591 /* AFURLRequestSerialization.m */,
+				F51A24EC1993D74B00F0F591 /* AFURLResponseSerialization.h */,
+				F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */,
+				F51A24EE1993D74B00F0F591 /* AFURLSessionManager.h */,
+				F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -139,6 +234,7 @@
 		F51A24D51993BD0400F0F591 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				F5087C74199E423F008767F7 /* fmdb */,
 			);
 			path = ThirdPart;
 			sourceTree = "<group>";
@@ -153,6 +249,10 @@
 		F51A24D71993BD1A00F0F591 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				F51A24D81993D2D000F0F591 /* DataStore.swift */,
+				F5087C87199E4B41008767F7 /* UserSetting.swift */,
+				F5087C89199E4B4E008767F7 /* SessionSetting.swift */,
+				F5087C8D199F94B5008767F7 /* SqliteManager.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -256,8 +356,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */,
 				F51A24D21993BC6900F0F591 /* RootController.swift in Sources */,
+				F5087C80199E423F008767F7 /* FMDatabase.m in Sources */,
+				F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */,
+				F51A24F31993D74B00F0F591 /* AFNetworkReachabilityManager.m in Sources */,
+				F5087C84199E423F008767F7 /* FMResultSet.m in Sources */,
+				F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */,
+				F51A24F51993D74B00F0F591 /* AFURLConnectionOperation.m in Sources */,
+				F51A24F41993D74B00F0F591 /* AFSecurityPolicy.m in Sources */,
+				F5087C88199E4B41008767F7 /* UserSetting.swift in Sources */,
+				F51A24F21993D74B00F0F591 /* AFHTTPSessionManager.m in Sources */,
+				F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */,
+				F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */,
+				F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */,
+				F5087C82199E423F008767F7 /* FMDatabasePool.m in Sources */,
+				F5087C8E199F94B5008767F7 /* SqliteManager.swift in Sources */,
+				F5087C83199E423F008767F7 /* FMDatabaseQueue.m in Sources */,
 				F51A24B41993BB3200F0F591 /* AppDelegate.swift in Sources */,
+				F5087C8A199E4B4E008767F7 /* SessionSetting.swift in Sources */,
+				F5087C81199E423F008767F7 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,9 +491,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Today/ViewControllers/Today-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -384,9 +505,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Today/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Today/ViewControllers/Today-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -443,6 +566,7 @@
 				F51A24CC1993BB3200F0F591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F51A24CD1993BB3200F0F591 /* Build configuration list for PBXNativeTarget "TodayTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +575,7 @@
 				F51A24CF1993BB3200F0F591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

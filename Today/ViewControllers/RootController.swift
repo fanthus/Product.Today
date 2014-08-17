@@ -8,16 +8,33 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
-                            
+class RootViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+
+    var mainTableView:UITableView?;
+    var dataStore:DataStore = DataStore.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blueColor();
+        mainTableView = UITableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
+        self.view.addSubview(mainTableView)
+        dataStore.sqliteManager.createSqliteFile();
+        dataStore.sqliteManager.createSqliteFile();
+        println( DataStore.sharedInstance.debugDescription)
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        var cellIdentifier:String = "identifyCell"
+        var cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return 20
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
