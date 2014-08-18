@@ -12,5 +12,11 @@ class TDAddItemViewController:TDBaseViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.grayColor()
+        self.title = NSLocalizedString("Add Record", comment: "")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "addRecord:")
+    }
+    
+    func addRecord(sender:AnyObject){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
