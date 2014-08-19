@@ -12,10 +12,10 @@ enum RecordStatus:Int{
     case RecordFinshed = 1,RecordUnfinished
 }
 
-class Record:NSObject{
+class MetaRecord:NSObject{
     var recordDescription:String?
     var recordId:Int32?
-    var recordTimeStamp:Double?
+    var recordTimeStamp:Int32?
     var recordTag:String?
     var recordStatus:RecordStatus?
 }

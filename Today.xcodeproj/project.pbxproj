@@ -36,7 +36,8 @@
 		F549192B19A0A194003EF072 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549192D19A0A194003EF072 /* InfoPlist.strings */; };
 		F549193519A0A847003EF072 /* AFNetworking.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193719A0A847003EF072 /* AFNetworking.strings */; };
 		F549193A19A0A847003EF072 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193C19A0A847003EF072 /* Localizable.strings */; };
-		F55F32F919A24BBC0077E106 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F32F819A24BBC0077E106 /* Record.swift */; };
+		F55F32F919A24BBC0077E106 /* MetaRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F32F819A24BBC0077E106 /* MetaRecord.swift */; };
+		F56E668119A37E8F0048A104 /* ReleaseSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E668019A37E8F0048A104 /* ReleaseSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +102,8 @@
 		F549192C19A0A194003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F549193619A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AFNetworking.strings"; sourceTree = "<group>"; };
 		F549193B19A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		F55F32F819A24BBC0077E106 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		F55F32F819A24BBC0077E106 /* MetaRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaRecord.swift; sourceTree = "<group>"; };
+		F56E668019A37E8F0048A104 /* ReleaseSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F51A24B31993BB3200F0F591 /* AppDelegate.swift */,
+				F56E667F19A37E890048A104 /* App */,
 				F51A24D01993BC6900F0F591 /* ViewControllers */,
 				F55F32F719A24BB10077E106 /* Model */,
 				F51A24D71993BD1A00F0F591 /* DataStore */,
@@ -278,9 +281,17 @@
 		F55F32F719A24BB10077E106 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F55F32F819A24BBC0077E106 /* Record.swift */,
+				F55F32F819A24BBC0077E106 /* MetaRecord.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F56E667F19A37E890048A104 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F56E668019A37E8F0048A104 /* ReleaseSetting.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,13 +401,14 @@
 				F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */,
 				F51A24F31993D74B00F0F591 /* AFNetworkReachabilityManager.m in Sources */,
 				F5087C84199E423F008767F7 /* FMResultSet.m in Sources */,
-				F55F32F919A24BBC0077E106 /* Record.swift in Sources */,
+				F55F32F919A24BBC0077E106 /* MetaRecord.swift in Sources */,
 				F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */,
 				F51A24F51993D74B00F0F591 /* AFURLConnectionOperation.m in Sources */,
 				F51A24F41993D74B00F0F591 /* AFSecurityPolicy.m in Sources */,
 				F5087C88199E4B41008767F7 /* UserSetting.swift in Sources */,
 				F51A24F21993D74B00F0F591 /* AFHTTPSessionManager.m in Sources */,
 				F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */,
+				F56E668119A37E8F0048A104 /* ReleaseSetting.swift in Sources */,
 				F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */,
 				F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */,
 				F5087C82199E423F008767F7 /* FMDatabasePool.m in Sources */,
@@ -500,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -536,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

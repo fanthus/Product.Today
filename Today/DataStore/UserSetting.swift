@@ -9,7 +9,7 @@
 import Foundation
 
 let firstInstallKey:String = "firstInstallKey"
-
+let appVersionKey:String = "appVersionKey"
 
 class UserSetting:NSObject{
     var userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -19,6 +19,15 @@ class UserSetting:NSObject{
     }
     func firstInstallValue() -> Bool{
         return userDefaults.boolForKey(firstInstallKey)
+    }
+    
+    func setAppVersion(value:String){
+        userDefaults.setObject(value, forKey: appVersionKey)
+    }
+    
+    func appVersion()->String{
+        //type casting.
+        return (userDefaults.objectForKey(appVersionKey) as String)
     }
     
 }
