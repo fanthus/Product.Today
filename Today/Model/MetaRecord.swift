@@ -8,14 +8,10 @@
 
 import Foundation
 
-enum RecordStatus:Int{
-    case RecordFinshed = 1,RecordUnfinished
-}
-
 class MetaRecord:NSObject{
     var recordDescription:String?
     var recordId:Int32?
     var recordTimeStamp:Int32?
     var recordTag:String?
-    var recordStatus:RecordStatus?
+    var recordFinished:Int32?
 }
