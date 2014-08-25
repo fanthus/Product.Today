@@ -29,12 +29,12 @@ class TDAddItemViewController:TDBaseViewController,UITextFieldDelegate{
     }
 
     func save(sender:AnyObject){
-        let record:MetaRecord = MetaRecord()
-        record.recordId = 1
-        record.recordDescription = metaRecordField.text
-        record.recordTag = "testTag"
-        record.recordFinished = 0
-        record.recordTimeStamp = Int32(NSTimeIntervalSince1970)
+        let record:TDItem = TDItem()
+        record.itemId = 1
+        record.itemDescription = metaRecordField.text
+        record.itemTag = "testTag"
+        record.itemStatus = ItemStatus.itemUnfinished
+        record.itemTimeStamp = Int32(NSTimeIntervalSince1970)
         DataStore.sharedInstance.sqliteManager.writeRecordToSqlite(record)
         self.dismissViewControllerAnimated(true, completion: nil)
     }

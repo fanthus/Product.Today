@@ -1,5 +1,5 @@
 //
-//  MetaRecordCell.swift
+//  ItemStatus.swift
 //  Today
 //
 //  Created by xiushan.fan on 23/8/14.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class MetaRecordCell:UITableViewCell{
-    
+enum ItemStatus:Int32{
+    case itemFinished = 1,itemUnfinished
 }

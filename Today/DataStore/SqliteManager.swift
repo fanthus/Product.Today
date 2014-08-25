@@ -9,7 +9,7 @@
 import Foundation
 
 var filePath:String?
-let metaRecordFile:String = "metaRecord"
+let itemFile:String = "toitem"
 
 class SqliteManager:NSObject {
     
@@ -17,7 +17,7 @@ class SqliteManager:NSObject {
     
     init() {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        filePath =  documentsPath + "/" + metaRecordFile
+        filePath =  documentsPath + "/" + itemFile
         println("filepath = \(filePath)")
     }
     
@@ -48,9 +48,9 @@ class SqliteManager:NSObject {
     
     //----------------------------------------------------------------------
 
-    func queryFromTable() -> [MetaRecord] {
+    func queryFromTable() -> [TDItem] {
         let fmdb:FMDatabase = FMDatabase(path:filePath as String)
-        var resultArray:[MetaRecord] = [];
+        var resultArray:[TDItem] = [];
         if fmdb.open(){
             if fmdb.tableExists(tName) == false {
                 self.createTable(filePath!)
@@ -59,42 +59,43 @@ class SqliteManager:NSObject {
             println(queryTableSql)
             var fmResult:FMResultSet = fmdb.executeQuery(queryTableSql, withArgumentsInArray: nil)
             while fmResult.next(){
-                var metaRecord:MetaRecord = MetaRecord();
-                metaRecord.recordDescription = fmResult.stringForColumn("recordDescription")
-                metaRecord.recordTag = fmResult.stringForColumn("recordTag")
-                metaRecord.recordFinished = fmResult.intForColumn("recordFinished")
-                metaRecord.recordTimeStamp = fmResult.intForColumn("recordTimeStamp")
-                metaRecord.recordId = fmResult.intForColumn("_id")
-                resultArray.append(metaRecord)
+                var item:TDItem = TDItem();
+                item.itemDescription = fmResult.stringForColumn("recordDescription")
+                item.itemTag = fmResult.stringForColumn("recordTag")
+                item.itemStatus = ItemStatus.fromRaw(fmResult.intForColumn("recordFinished"))
+                item.itemTimeStamp = fmResult.intForColumn("recordTimeStamp")
+                item.itemId = fmResult.intForColumn("_id")
+                resultArray.append(item)
             }
         }
         println("resultArray \(resultArray)")
         return resultArray;
     }
     
-    func writeRecordToSqlite(metaRecord:MetaRecord) -> Bool{
+    func writeRecordToSqlite(item:TDItem) -> Bool{
         let fmdb:FMDatabase = FMDatabase(path:filePath as String)
         if fmdb.open(){
             if fmdb.tableExists(tName) == false {
                 self.createTable(filePath!)
             }
-            println(NSNumber(int: metaRecord.recordTimeStamp!))
-            println(metaRecord.recordTag)
-            println(metaRecord.recordDescription)
+            println(NSNumber(int: item.itemTimeStamp!))
+            println(item.itemTag)
+            println(item.itemDescription)
+            let itemStatusInt:Int32 = ItemStatus.toRaw(item.itemStatus!)()
             let insertTableSql:String = "insert into \(tName)(recordTimeStamp,recordTag,recordFinished,recordDescription) values (?,?,?,?)"
-            fmdb.executeUpdate(insertTableSql, NSNumber(int: metaRecord.recordTimeStamp!),metaRecord.recordTag!,NSNumber(int: metaRecord.recordFinished!),metaRecord.recordDescription!)
+            fmdb.executeUpdate(insertTableSql, NSNumber(int: item.itemTimeStamp!),item.itemTag!,NSNumber(int: itemStatusInt),item.itemDescription!)
         }
         fmdb.close()
         return true
     }
     
-    func updateRecordToSqlite(metaRecord:MetaRecord) -> Bool{
+    func updateRecordToSqlite(item:TDItem) -> Bool{
         let fmdb:FMDatabase = FMDatabase(path: filePath as String)
         if fmdb.open(){
             if fmdb.tableExists(tName) == false{
                 self.createTable(filePath!)
             }
-            let updateTableSql:String = "update \(tName) set recordTag = '\(metaRecord.recordTag!)',recordFinished = \(metaRecord.recordFinished!),recordDescription = '\(metaRecord.recordDescription!)' where _id = \(metaRecord.recordId!)"
+            let updateTableSql:String = "update \(tName) set recordTag = '\(item.itemTag!)',recordFinished = \(item.itemStatus!.toRaw()),recordDescription = '\(item.itemDescription!)' where _id = \(item.itemId!)"
             var result:Bool = fmdb.executeUpdate(updateTableSql, withArgumentsInArray: nil)
             println(result)
         }

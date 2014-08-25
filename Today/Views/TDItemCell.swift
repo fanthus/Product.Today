@@ -1,5 +1,5 @@
 //
-//  SelectButton.swift
+//  MetaRecordCell.swift
 //  Today
 //
 //  Created by xiushan.fan on 23/8/14.
@@ -7,9 +7,7 @@
 //
 
 import Foundation
-class SelectButton:UIButton{
-//    var selected:Bool = false
-    
+
+class TDItemCell:UITableViewCell{
     
 }
-

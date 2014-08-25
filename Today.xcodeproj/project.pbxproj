@@ -20,7 +20,7 @@
 		F51A24B91993BB3200F0F591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51A24B71993BB3200F0F591 /* Main.storyboard */; };
 		F51A24BB1993BB3200F0F591 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51A24BA1993BB3200F0F591 /* Images.xcassets */; };
 		F51A24C71993BB3200F0F591 /* TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24C61993BB3200F0F591 /* TodayTests.swift */; };
-		F51A24D21993BC6900F0F591 /* TDRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D11993BC6900F0F591 /* TDRootViewController.swift */; };
+		F51A24D21993BC6900F0F591 /* TDInboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D11993BC6900F0F591 /* TDInboxViewController.swift */; };
 		F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A24D81993D2D000F0F591 /* DataStore.swift */; };
 		F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24DE1993D74B00F0F591 /* AFHTTPRequestOperation.m */; };
 		F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24E01993D74B00F0F591 /* AFHTTPRequestOperationManager.m */; };
@@ -31,16 +31,18 @@
 		F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EB1993D74B00F0F591 /* AFURLRequestSerialization.m */; };
 		F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */; };
 		F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */; };
-		F528864F19A840EA00A52577 /* MetaRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528864E19A840EA00A52577 /* MetaRecordCell.swift */; };
-		F528865119A8696600A52577 /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528865019A8696600A52577 /* SelectButton.swift */; };
+		F528864F19A840EA00A52577 /* TDItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528864E19A840EA00A52577 /* TDItemCell.swift */; };
+		F528865119A8696600A52577 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528865019A8696600A52577 /* CheckBoxButton.swift */; };
+		F528865319A8984100A52577 /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528865219A8984100A52577 /* EnumType.swift */; };
 		F549190A19A08BD6003EF072 /* TDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549190919A08BD6003EF072 /* TDBaseViewController.swift */; };
 		F549190C19A08C64003EF072 /* TDAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549190B19A08C64003EF072 /* TDAddItemViewController.swift */; };
 		F549192B19A0A194003EF072 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549192D19A0A194003EF072 /* InfoPlist.strings */; };
 		F549193519A0A847003EF072 /* AFNetworking.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193719A0A847003EF072 /* AFNetworking.strings */; };
 		F549193A19A0A847003EF072 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F549193C19A0A847003EF072 /* Localizable.strings */; };
-		F55F32F919A24BBC0077E106 /* MetaRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F32F819A24BBC0077E106 /* MetaRecord.swift */; };
+		F55F32F919A24BBC0077E106 /* TDItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F32F819A24BBC0077E106 /* TDItem.swift */; };
 		F56E668119A37E8F0048A104 /* ReleaseSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E668019A37E8F0048A104 /* ReleaseSetting.swift */; };
 		F5A9856519A502B200398452 /* FMDatabaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9856419A502B200398452 /* FMDatabaseWrapper.swift */; };
+		F5E1529E19AB886E004002E6 /* TDMetamindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1529D19AB886E004002E6 /* TDMetamindViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,7 @@
 		F51A24C01993BB3200F0F591 /* TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A24C51993BB3200F0F591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = TodayTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		F51A24C61993BB3200F0F591 /* TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTests.swift; sourceTree = "<group>"; };
-		F51A24D11993BC6900F0F591 /* TDRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDRootViewController.swift; sourceTree = "<group>"; };
+		F51A24D11993BC6900F0F591 /* TDInboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDInboxViewController.swift; sourceTree = "<group>"; };
 		F51A24D81993D2D000F0F591 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Today-Bridging-Header.h"; sourceTree = "<group>"; };
 		F51A24DD1993D74B00F0F591 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -98,8 +100,9 @@
 		F51A24ED1993D74B00F0F591 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F51A24EE1993D74B00F0F591 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F51A24EF1993D74B00F0F591 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		F528864E19A840EA00A52577 /* MetaRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaRecordCell.swift; sourceTree = "<group>"; };
-		F528865019A8696600A52577 /* SelectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		F528864E19A840EA00A52577 /* TDItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDItemCell.swift; sourceTree = "<group>"; };
+		F528865019A8696600A52577 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
+		F528865219A8984100A52577 /* EnumType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumType.swift; sourceTree = "<group>"; };
 		F549190919A08BD6003EF072 /* TDBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDBaseViewController.swift; sourceTree = "<group>"; };
 		F549190B19A08C64003EF072 /* TDAddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDAddItemViewController.swift; sourceTree = "<group>"; };
 		F549192219A0A06B003EF072 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -107,9 +110,10 @@
 		F549192C19A0A194003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F549193619A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AFNetworking.strings"; sourceTree = "<group>"; };
 		F549193B19A0A847003EF072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		F55F32F819A24BBC0077E106 /* MetaRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetaRecord.swift; sourceTree = "<group>"; };
+		F55F32F819A24BBC0077E106 /* TDItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDItem.swift; sourceTree = "<group>"; };
 		F56E668019A37E8F0048A104 /* ReleaseSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReleaseSetting.swift; sourceTree = "<group>"; };
 		F5A9856419A502B200398452 /* FMDatabaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDatabaseWrapper.swift; sourceTree = "<group>"; };
+		F5E1529D19AB886E004002E6 /* TDMetamindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDMetamindViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				F549190919A08BD6003EF072 /* TDBaseViewController.swift */,
-				F51A24D11993BC6900F0F591 /* TDRootViewController.swift */,
+				F5E1529D19AB886E004002E6 /* TDMetamindViewController.swift */,
+				F51A24D11993BC6900F0F591 /* TDInboxViewController.swift */,
 				F549190B19A08C64003EF072 /* TDAddItemViewController.swift */,
 				F51A24DA1993D5BB00F0F591 /* Today-Bridging-Header.h */,
 			);
@@ -289,8 +294,8 @@
 		F528864D19A840DA00A52577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F528864E19A840EA00A52577 /* MetaRecordCell.swift */,
-				F528865019A8696600A52577 /* SelectButton.swift */,
+				F528864E19A840EA00A52577 /* TDItemCell.swift */,
+				F528865019A8696600A52577 /* CheckBoxButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,7 +303,8 @@
 		F55F32F719A24BB10077E106 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F55F32F819A24BBC0077E106 /* MetaRecord.swift */,
+				F55F32F819A24BBC0077E106 /* TDItem.swift */,
+				F528865219A8984100A52577 /* EnumType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -413,13 +419,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51A24F01993D74B00F0F591 /* AFHTTPRequestOperation.m in Sources */,
-				F51A24D21993BC6900F0F591 /* TDRootViewController.swift in Sources */,
+				F51A24D21993BC6900F0F591 /* TDInboxViewController.swift in Sources */,
 				F5087C80199E423F008767F7 /* FMDatabase.m in Sources */,
-				F528864F19A840EA00A52577 /* MetaRecordCell.swift in Sources */,
+				F528864F19A840EA00A52577 /* TDItemCell.swift in Sources */,
 				F51A24F11993D74B00F0F591 /* AFHTTPRequestOperationManager.m in Sources */,
 				F51A24F31993D74B00F0F591 /* AFNetworkReachabilityManager.m in Sources */,
 				F5087C84199E423F008767F7 /* FMResultSet.m in Sources */,
-				F55F32F919A24BBC0077E106 /* MetaRecord.swift in Sources */,
+				F55F32F919A24BBC0077E106 /* TDItem.swift in Sources */,
 				F51A24F71993D74B00F0F591 /* AFURLResponseSerialization.m in Sources */,
 				F51A24F51993D74B00F0F591 /* AFURLConnectionOperation.m in Sources */,
 				F51A24F41993D74B00F0F591 /* AFSecurityPolicy.m in Sources */,
@@ -427,10 +433,12 @@
 				F51A24F21993D74B00F0F591 /* AFHTTPSessionManager.m in Sources */,
 				F51A24F61993D74B00F0F591 /* AFURLRequestSerialization.m in Sources */,
 				F56E668119A37E8F0048A104 /* ReleaseSetting.swift in Sources */,
+				F5E1529E19AB886E004002E6 /* TDMetamindViewController.swift in Sources */,
 				F51A24F81993D74B00F0F591 /* AFURLSessionManager.m in Sources */,
 				F51A24D91993D2D000F0F591 /* DataStore.swift in Sources */,
 				F5A9856519A502B200398452 /* FMDatabaseWrapper.swift in Sources */,
-				F528865119A8696600A52577 /* SelectButton.swift in Sources */,
+				F528865319A8984100A52577 /* EnumType.swift in Sources */,
+				F528865119A8696600A52577 /* CheckBoxButton.swift in Sources */,
 				F5087C82199E423F008767F7 /* FMDatabasePool.m in Sources */,
 				F549190C19A08C64003EF072 /* TDAddItemViewController.swift in Sources */,
 				F549190A19A08BD6003EF072 /* TDBaseViewController.swift in Sources */,

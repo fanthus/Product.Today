@@ -14,9 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dataStore:DataStore = DataStore.sharedInstance
 
-
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        var vc:RootViewController = RootViewController();
+        var vc:MetaMindViewController = MetaMindViewController();
         var nav:UINavigationController = UINavigationController(rootViewController: vc)
         self.window!.rootViewController = nav
         dataStore.sqliteManager.createSqliteFile();
