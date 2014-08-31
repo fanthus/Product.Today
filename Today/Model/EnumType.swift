@@ -9,5 +9,5 @@
 import Foundation
 
 enum ItemStatus:Int32{
-    case itemFinished = 1,itemUnfinished
+    case ItemFinished = 1,ItemUnfinished
 }

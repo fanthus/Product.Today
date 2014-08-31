@@ -69,11 +69,11 @@ class InboxViewController:TDBaseViewController,UITableViewDelegate,UITableViewDa
         var record:TDItem = recordArray[btn.tag]
         if btn.selected{
             btn.setBackgroundImage(UIImage(named: "checkbox-selected"), forState: UIControlState.Normal)
-            record.itemStatus = ItemStatus.itemFinished
+            record.itemStatus = ItemStatus.ItemFinished
         }
         else{
             btn.setBackgroundImage(UIImage(named: "checkbox-unselected"), forState: UIControlState.Normal)
-            record.itemStatus = ItemStatus.itemUnfinished
+            record.itemStatus = ItemStatus.ItemUnfinished
         }
         DataStore.sharedInstance.sqliteManager.updateRecordToSqlite(record)
     }

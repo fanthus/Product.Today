@@ -30,7 +30,6 @@ class MetaMindViewController:TDBaseViewController,UITableViewDelegate,UITableVie
         displayNamesArray.append(secondSectionArray)
         displayNamesArray.append(thirdSectionArray)
         displayNamesArray.append(forthSectionArray)
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,23 +62,12 @@ class MetaMindViewController:TDBaseViewController,UITableViewDelegate,UITableVie
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         var rowNum:Int = 0
-        switch section{
-        case 0:
-            rowNum = 1
-        case 1:
-            rowNum = 2
-        case 2:
-            rowNum = 3
-        case 3:
-            rowNum = 2
-        default:
-            rowNum = 0
-        }
+        rowNum = displayNamesArray[section].count
         return rowNum;
     }
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 4
+        return displayNamesArray.count
     }
 }
 

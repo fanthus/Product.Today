@@ -33,7 +33,7 @@ class TDAddItemViewController:TDBaseViewController,UITextFieldDelegate{
         record.itemId = 1
         record.itemDescription = metaRecordField.text
         record.itemTag = "testTag"
-        record.itemStatus = ItemStatus.itemUnfinished
+        record.itemStatus = ItemStatus.ItemUnfinished
         record.itemTimeStamp = Int32(NSTimeIntervalSince1970)
         DataStore.sharedInstance.sqliteManager.writeRecordToSqlite(record)
         self.dismissViewControllerAnimated(true, completion: nil)
