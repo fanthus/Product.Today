@@ -290,13 +290,12 @@
     }
     
     int dataSize = sqlite3_column_bytes([_statement statement], columnIdx);
-    const char *dataBuffer = sqlite3_column_blob([_statement statement], columnIdx);
     
-    if (dataBuffer == NULL) {
-        return nil;
-    }
+    NSMutableData *data = [NSMutableData dataWithLength:(NSUInteger)dataSize];
     
-    return [NSData dataWithBytes:(const void *)dataBuffer length:(NSUInteger)dataSize];
+    memcpy([data mutableBytes], sqlite3_column_blob([_statement statement], columnIdx), dataSize);
+    
+    return data;
 }
 
 

@@ -87,12 +87,12 @@
     
     [self executeLocked:^() {
         
-        if ([self->_databaseInPool containsObject:db]) {
+        if ([_databaseInPool containsObject:db]) {
             [[NSException exceptionWithName:@"Database already in pool" reason:@"The FMDatabase being put back into the pool is already present in the pool" userInfo:nil] raise];
         }
         
-        [self->_databaseInPool addObject:db];
-        [self->_databaseOutPool removeObject:db];
+        [_databaseInPool addObject:db];
+        [_databaseOutPool removeObject:db];
         
     }];
 }
@@ -103,53 +103,53 @@
     
     
     [self executeLocked:^() {
-        db = [self->_databaseInPool lastObject];
+        db = [_databaseInPool lastObject];
         
         BOOL shouldNotifyDelegate = NO;
         
         if (db) {
-            [self->_databaseOutPool addObject:db];
-            [self->_databaseInPool removeLastObject];
+            [_databaseOutPool addObject:db];
+            [_databaseInPool removeLastObject];
         }
         else {
             
-            if (self->_maximumNumberOfDatabasesToCreate) {
-                NSUInteger currentCount = [self->_databaseOutPool count] + [self->_databaseInPool count];
+            if (_maximumNumberOfDatabasesToCreate) {
+                NSUInteger currentCount = [_databaseOutPool count] + [_databaseInPool count];
                 
-                if (currentCount >= self->_maximumNumberOfDatabasesToCreate) {
+                if (currentCount >= _maximumNumberOfDatabasesToCreate) {
                     NSLog(@"Maximum number of databases (%ld) has already been reached!", (long)currentCount);
                     return;
                 }
             }
             
-            db = [FMDatabase databaseWithPath:self->_path];
+            db = [FMDatabase databaseWithPath:_path];
             shouldNotifyDelegate = YES;
         }
         
         //This ensures that the db is opened before returning
 #if SQLITE_VERSION_NUMBER >= 3005000
-        BOOL success = [db openWithFlags:self->_openFlags];
+        BOOL success = [db openWithFlags:_openFlags];
 #else
         BOOL success = [db open];
 #endif
         if (success) {
-            if ([self->_delegate respondsToSelector:@selector(databasePool:shouldAddDatabaseToPool:)] && ![self->_delegate databasePool:self shouldAddDatabaseToPool:db]) {
+            if ([_delegate respondsToSelector:@selector(databasePool:shouldAddDatabaseToPool:)] && ![_delegate databasePool:self shouldAddDatabaseToPool:db]) {
                 [db close];
                 db = 0x00;
             }
             else {
                 //It should not get added in the pool twice if lastObject was found
-                if (![self->_databaseOutPool containsObject:db]) {
-                    [self->_databaseOutPool addObject:db];
+                if (![_databaseOutPool containsObject:db]) {
+                    [_databaseOutPool addObject:db];
                     
-                    if (shouldNotifyDelegate && [self->_delegate respondsToSelector:@selector(databasePool:didAddDatabase:)]) {
-                        [self->_delegate databasePool:self didAddDatabase:db];
+                    if (shouldNotifyDelegate && [_delegate respondsToSelector:@selector(databasePool:didAddDatabase:)]) {
+                        [_delegate databasePool:self didAddDatabase:db];
                     }
                 }
             }
         }
         else {
-            NSLog(@"Could not open up the database at path %@", self->_path);
+            NSLog(@"Could not open up the database at path %@", _path);
             db = 0x00;
         }
     }];
@@ -162,7 +162,7 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
-        count = [self->_databaseInPool count];
+        count = [_databaseInPool count];
     }];
     
     return count;
@@ -173,7 +173,7 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
-        count = [self->_databaseOutPool count];
+        count = [_databaseOutPool count];
     }];
     
     return count;
@@ -183,7 +183,7 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
-        count = [self->_databaseOutPool count] + [self->_databaseInPool count];
+        count = [_databaseOutPool count] + [_databaseInPool count];
     }];
     
     return count;
@@ -191,8 +191,8 @@
 
 - (void)releaseAllDatabases {
     [self executeLocked:^() {
-        [self->_databaseOutPool removeAllObjects];
-        [self->_databaseInPool removeAllObjects];
+        [_databaseOutPool removeAllObjects];
+        [_databaseInPool removeAllObjects];
     }];
 }
 
