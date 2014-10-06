@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InboxViewController:TDBaseViewController,UITableViewDelegate,UITableViewDataSource{
+class InboxViewController: TDBaseViewController, UITableViewDelegate, UITableViewDataSource,TDItemCellDelegate{
 
     var tableView:UITableView?;
     let cellIdentifier:String = "cell"
@@ -22,7 +22,7 @@ class InboxViewController:TDBaseViewController,UITableViewDelegate,UITableViewDa
         tableView = UITableView(frame:self.view.bounds, style: UITableViewStyle.Plain)
         tableView!.delegate = self
         tableView!.dataSource = self
-        self.view.addSubview(tableView)
+        self.view.addSubview(tableView!)
         tableView!.registerClass(TDItemCell.self, forCellReuseIdentifier: self.cellIdentifier)
     }
     
@@ -33,31 +33,33 @@ class InboxViewController:TDBaseViewController,UITableViewDelegate,UITableViewDa
         tableView!.reloadData()
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:TDItemCell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as TDItemCell
-        var checkbox:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
-        checkbox.setBackgroundImage(UIImage(named: "checkbox-unselected"), forState:UIControlState.Normal)
-        checkbox.addTarget(self, action: "selectBtn:", forControlEvents: UIControlEvents.TouchUpInside)
-        checkbox.frame = CGRectMake(18, 18, 24, 24)
-        checkbox.tag = indexPath.row
-        cell.addSubview(checkbox)
-        
-        var label:UILabel = UILabel(frame: CGRectMake(55, 0, 240, 60))
-        cell.addSubview(label)
-        label.text = recordArray[indexPath.row].itemDescription
+        cell.delegate = self;
+        cell.checkBoxBtn!.addTarget(self, action: "selectBtn:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.checkBoxBtn!.tag = indexPath.row
+
+        cell.label!.text = recordArray[indexPath.row].itemDescription
+        cell.addSubview(cell.label!)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell:TDItemCell = tableView.cellForRowAtIndexPath(indexPath)! as TDItemCell
+        cell.delegate?.selectCell()
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         return 60.0
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return recordArray.count;
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recordArray.count
     }
     
     func tableView(tableView: UITableView!, shouldHighlightRowAtIndexPath indexPath: NSIndexPath!) -> Bool{
-        return false
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,6 +84,10 @@ class InboxViewController:TDBaseViewController,UITableViewDelegate,UITableViewDa
         let addItemVC:TDAddItemViewController = TDAddItemViewController()
         let addItemNav:UINavigationController = UINavigationController(rootViewController: addItemVC)
         self.presentViewController(addItemNav, animated: true, completion:nil)
+    }
+    
+    func selectCell() {
+        println("select cell ");
     }
 }
 

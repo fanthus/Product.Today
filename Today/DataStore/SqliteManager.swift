@@ -15,7 +15,7 @@ class SqliteManager:NSObject {
     
     let tName:String = "records_table"
     
-    init() {
+    override init() {
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         filePath =  documentsPath + "/" + itemFile
         println("filepath = \(filePath)")
@@ -27,14 +27,14 @@ class SqliteManager:NSObject {
         }
         else{
             var fileManager:NSFileManager = NSFileManager.defaultManager();
-            fileManager.createFileAtPath(filePath as String, contents: nil, attributes: nil)
+            fileManager.createFileAtPath(filePath! as String, contents: nil, attributes: nil)
         }
         return true
     }
     
     func haveSqliteFile()->Bool{
         let fileManager:NSFileManager = NSFileManager.defaultManager()
-        return fileManager.fileExistsAtPath(filePath);
+        return fileManager.fileExistsAtPath(filePath!);
     }
     
     func createTable(sqfilePath:String) -> Bool{
@@ -49,7 +49,7 @@ class SqliteManager:NSObject {
     //----------------------------------------------------------------------
 
     func queryFromTable() -> [TDItem] {
-        let fmdb:FMDatabase = FMDatabase(path:filePath as String)
+        let fmdb:FMDatabase = FMDatabase(path:filePath! as String)
         var resultArray:[TDItem] = [];
         if fmdb.open(){
             if fmdb.tableExists(tName) == false {
@@ -73,7 +73,7 @@ class SqliteManager:NSObject {
     }
     
     func writeRecordToSqlite(item:TDItem) -> Bool{
-        let fmdb:FMDatabase = FMDatabase(path:filePath as String)
+        let fmdb:FMDatabase = FMDatabase(path:filePath! as String)
         if fmdb.open(){
             if fmdb.tableExists(tName) == false {
                 self.createTable(filePath!)
@@ -90,7 +90,7 @@ class SqliteManager:NSObject {
     }
     
     func updateRecordToSqlite(item:TDItem) -> Bool{
-        let fmdb:FMDatabase = FMDatabase(path: filePath as String)
+        let fmdb:FMDatabase = FMDatabase(path: filePath! as String)
         if fmdb.open(){
             if fmdb.tableExists(tName) == false{
                 self.createTable(filePath!)
